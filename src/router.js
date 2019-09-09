@@ -1,16 +1,28 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import Home from './views/Home.vue'
-import Home from './components/Home.vue'
-import Search from './components/Search.vue'
-import ShoppingCart from './components/Cart/ShoppingCart.vue'
-import Vip from './components/Vip.vue'
-import NewsList from './components/News/NewsList.vue'
-import NewsDetail from './components/News/NewsDetail.vue'
-import PhotoGallery from './components/Photo/PhotoGallery.vue'
-import PhotoDetail from './components/Photo/PhotoDetail.vue'
-import GoodsList from './components/Goods/GoodsList.vue'
-import ReportTable from './components/Report/ReportTable.vue'
+
+// import Home from './components/Home.vue'
+// import Search from './components/Search.vue'
+// import ShoppingCart from './components/Cart/ShoppingCart.vue'
+// import Vip from './components/Vip.vue'
+// import NewsList from './components/News/NewsList.vue'
+// import NewsDetail from './components/News/NewsDetail.vue'
+// import PhotoGallery from './components/Photo/PhotoGallery.vue'
+// import PhotoDetail from './components/Photo/PhotoDetail.vue'
+// import GoodsList from './components/Goods/GoodsList.vue'
+// import ReportTable from './components/Report/ReportTable.vue'
+
+// 懒加载引入
+const Home = () => import('./components/Home.vue')
+const Search = () => import('./components/Search.vue')
+const ShoppingCart = () => import('./components/Cart/ShoppingCart.vue')
+const Vip = () => import('./components/Vip.vue')
+const NewsList = () => import('./components/News/NewsList.vue')
+const NewsDetail = () => import('./components/News/NewsDetail.vue')
+const PhotoGallery = () => import('./components/Photo/PhotoGallery.vue')
+const PhotoDetail = () => import('./components/Photo/PhotoDetail.vue')
+const GoodsList = () => import('./components/Goods/GoodsList.vue')
+const ReportTable = () => import('./components/Report/ReportTable.vue')
 
 Vue.use(Router);
 

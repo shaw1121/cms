@@ -4,7 +4,7 @@ module.exports = {
   ],
 
   // mint-ui 按需引入
-  plugins: [['component', 
+  plugins: ["@babel/plugin-syntax-dynamic-import", ['component', 
     {
       "libraryName": "mint-ui",
       "style": true
