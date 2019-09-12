@@ -17,4 +17,4 @@ cd dist
 
 http-server -a -p 8080
 
-should enter `http://139.24.217.220:8080/index.html`, otherwise annot enter
+should enter `http://139.24.217.220:8080/index.html`, otherwise cannot enter
