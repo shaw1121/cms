@@ -22,65 +22,71 @@
 
 <script>
 import src1 from '../assets/imgs/logo.png'
+import realtime from '../assets/imgs/realtime.png'
+import modeling from '../assets/imgs/modeling.png'
+import history from '../assets/imgs/history.jpg'
+import product from '../assets/imgs/product.png'
+import assetsIcon from '../assets/imgs/assets.png'
 
 const grids = [
+
     {
         id: 1,
-        src: src1,
-        title: '新闻资讯',
+        src: modeling,
+        title: 'Modeling',
         router: {
-            name: 'newsList'
-        }
-    },
-    {
-        id: 2,
-        src: src1,
-        title: '图文分享',
-        router: {
-            name: 'photoGallery',
-            params: { categoryId: 23 } // 默认
-        }
-    },
-    {
-        id: 3,
-        src: src1,
-        title: '商品展示',
-        router: {
-            name: 'goodsList'
-        }
-    },
-    {
-        id: 4,
-        src: src1,
-        title: '产线建模',
-        router: {
-            name: 'newsList'
-        }
-    },
-    {
-        id: 5,
-        src: src1,
-        title: '故障事件',
-        router: {
-            name: 'newsList'
+            name: 'iotModeling'
         }
     },
     {
         id: 6,
-        src: src1,
-        title: '产量报表',
+        src: realtime,
+        title: 'Real-Time data',
         router: {
             name: 'reportTable'
         }
     },
     {
         id: 7,
-        src: src1,
-        title: '产量分析',
+        src: history,
+        title: 'History Data',
         router: {
-            name: 'newsList'
+            name: 'historyData'
         }
-    }
+    },
+    {
+        id: 5,
+        src: assetsIcon,
+        title: 'Assets',
+        router: {
+            name: 'assetsList'
+        }
+    },
+    // {
+    //     id: 7,
+    //     src: src1,
+    //     title: 'News',
+    //     router: {
+    //         name: 'newsList'
+    //     }
+    // },
+    {
+        id: 2,
+        src: product,
+        title: 'Product Display',
+        router: {
+            name: 'photoGallery',
+            params: { categoryId: 23 } // 默认
+        }
+    },
+    // {
+    //     id: 3,
+    //     src: src1,
+    //     title: 'Product Display',
+    //     router: {
+    //         name: 'goodsList'
+    //     }
+    // }
 ]
 
 export default {
@@ -120,6 +126,7 @@ export default {
 
 .list {
     width: 100%;
+    margin-top: 15px;
 }
 
 .list ul {

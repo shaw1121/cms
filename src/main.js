@@ -4,12 +4,18 @@ import Vuex from 'vuex'
 import App from './App.vue'
 import router from './router'
 // import Mint from 'mint-ui'
-import {Swipe, Header, Button,  Tabbar, TabItem, SwipeItem, Lazyload, Indicator, Toast } from 'mint-ui'
+import {Swipe, Header, Button,  Tabbar, TabItem, SwipeItem, Lazyload, 
+  DatetimePicker, Indicator, Toast, Field,Popup,Cell,Badge   } from 'mint-ui'
 import moment from 'moment'
 import 'mint-ui/lib/style.css'
 import NavBar from './components/common/NavBar.vue'
 import axios from 'axios'
 import store from './store/index'
+import Select2 from './components/common/Select2.vue'
+import PieChart from './components/echarts/PieChart.vue'
+import LineChart from './components/echarts/LineChart.vue'
+import StackedLineChart from './components/echarts/StackedLineChart.vue'
+import PieChartAll from './components/echarts/PieChartAll.vue'
 
 // 引入全局样式
 import './style/common.css';
@@ -28,11 +34,20 @@ Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
 Vue.component(Tabbar.name, Tabbar);
 Vue.component(TabItem.name, TabItem);
-// Vue.component(Indicator.name, Indicator);
+Vue.component(DatetimePicker.name, DatetimePicker);
+Vue.component(Field.name, Field);
+Vue.component(Popup.name, Popup);
+Vue.component(Cell.name, Cell);
+Vue.component(Badge.name, Badge);
 Vue.use(Toast);
 Vue.use(Lazyload);
 
 Vue.component('NavBar', NavBar);
+Vue.component('Select2', Select2);
+Vue.component('PieChart', PieChart);
+Vue.component('LineChart', LineChart);
+Vue.component('StackedLineChart', StackedLineChart)
+Vue.component('PieChartAll', PieChartAll)
 
 // https://cn.vuejs.org/v2/guide/components-registration.html#%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E5%85%A8%E5%B1%80%E6%B3%A8%E5%86%8C
 const requireComponent = require.context(

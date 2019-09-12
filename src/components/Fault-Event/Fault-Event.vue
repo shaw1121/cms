@@ -1,6 +1,6 @@
 <template>
-  <div class="goods-list">
-      产品详情
+  <div>
+    Monitor fault event here
   </div>
 </template>
 

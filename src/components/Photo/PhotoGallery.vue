@@ -1,13 +1,13 @@
 <template>
   <div class="photoList">
-      <NavBar title="图文列表"></NavBar>
-      <div class="category-list">
+      <NavBar title="Product list"></NavBar>
+      <!-- <div class="category-list">
           <ul>
               <li v-for='(category, index) in categoryList' :key="category.id" @click="categoryClickHandler(category.id, index)">
                 <a href="javascript:void(0);" :class="{active:index==currentIndex}">{{category.title }} </a>
               </li>
           </ul>
-      </div>
+      </div> -->
 
       <!-- 图片展示区域 -->
       <div class="photo-list">
@@ -32,43 +32,97 @@
 import axios from 'axios'
 // import { Toast } from 'mint-ui'
 
+import pic from '../../assets/imgs/plc.jpg'
+import pic1 from '../../assets/imgs/plc1.jpg'
+import pic2 from '../../assets/imgs/plc2.jpg'
+import pic3 from '../../assets/imgs/plc3.jpg'
+import pic4 from '../../assets/imgs/plc4.jpg'
+import pic5 from '../../assets/imgs/plc5.jpg'
+import pic6 from '../../assets/imgs/plc6.jpg'
+
+// const photoList = [
+//     {
+//         id: 23,
+//         title: 'teststete',
+//         img_url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566305780140&di=90f07c2708786aed20c7b65ab2d849e1&imgtype=0&src=http%3A%2F%2Fimg005.hc360.cn%2Fk1%2FM09%2F5A%2FCD%2FwKhQwFe-XdKETrD7AAAAAMlpCMI236.jpg',
+//         summary: '难能可贵的是他始终保留着这个一生的习惯难能可贵的是他始终保留着这个一生的习惯难能可贵的是他始终保留着这个一生的习惯难能可贵的是他始终保留着这个一生的习惯'
+//     },
+//     {
+//         id: 223,
+//         title: 'TITLE',
+//         img_url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566305780140&di=90f07c2708786aed20c7b65ab2d849e1&imgtype=0&src=http%3A%2F%2Fimg005.hc360.cn%2Fk1%2FM09%2F5A%2FCD%2FwKhQwFe-XdKETrD7AAAAAMlpCMI236.jpg',
+//         summary: '不知道的以为他已经去世了'
+//     },
+//         {
+//         id: 123,
+//         title: 'teststete',
+//         img_url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566305780140&di=90f07c2708786aed20c7b65ab2d849e1&imgtype=0&src=http%3A%2F%2Fimg005.hc360.cn%2Fk1%2FM09%2F5A%2FCD%2FwKhQwFe-XdKETrD7AAAAAMlpCMI236.jpg',
+//         summary: '难能可贵的是他始终保留着这个一生的习惯'
+//     },
+//     {
+//         id: 2243,
+//         title: 'TITLE',
+//         img_url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566305780140&di=90f07c2708786aed20c7b65ab2d849e1&imgtype=0&src=http%3A%2F%2Fimg005.hc360.cn%2Fk1%2FM09%2F5A%2FCD%2FwKhQwFe-XdKETrD7AAAAAMlpCMI236.jpg',
+//         summary: '不知道的以为他已经去世了'
+//     },
+//         {
+//         id: 243,
+//         title: 'teststete',
+//         img_url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566305780140&di=90f07c2708786aed20c7b65ab2d849e1&imgtype=0&src=http%3A%2F%2Fimg005.hc360.cn%2Fk1%2FM09%2F5A%2FCD%2FwKhQwFe-XdKETrD7AAAAAMlpCMI236.jpg',
+//         summary: '难能可贵的是他始终保留着这个一生的习惯'
+//     },
+//     {
+//         id: 2423,
+//         title: 'TITLE',
+//         img_url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566305780140&di=90f07c2708786aed20c7b65ab2d849e1&imgtype=0&src=http%3A%2F%2Fimg005.hc360.cn%2Fk1%2FM09%2F5A%2FCD%2FwKhQwFe-XdKETrD7AAAAAMlpCMI236.jpg',
+//         summary: '不知道的以为他已经去世了'
+//     }
+// ];
+
 const photoList = [
     {
-        id: 23,
+        id: 20,
+        title: 'SIMATIC IOT2040',
+        img_url: pic,
+        summary: 'is an IOT solution developed for industrial production. It is an open platform used to capture, process and transfer data in the production environment.'
+    },
+    {
+        id: 26,
+        title: 'SIMATIC IPC647E & IPC847E',
+        img_url: pic6,
+        summary: 'is high-performance, rugged and expandable industrial PCs in a 19" rack format. They offer customers high protection for their investment and reliable operation in especially rugged industrial environments'
+    },
+    {
+        id: 21,
         title: 'teststete',
-        img_url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566305780140&di=90f07c2708786aed20c7b65ab2d849e1&imgtype=0&src=http%3A%2F%2Fimg005.hc360.cn%2Fk1%2FM09%2F5A%2FCD%2FwKhQwFe-XdKETrD7AAAAAMlpCMI236.jpg',
+        img_url: pic1,
         summary: '难能可贵的是他始终保留着这个一生的习惯难能可贵的是他始终保留着这个一生的习惯难能可贵的是他始终保留着这个一生的习惯难能可贵的是他始终保留着这个一生的习惯'
     },
     {
-        id: 223,
-        title: 'TITLE',
-        img_url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566305780140&di=90f07c2708786aed20c7b65ab2d849e1&imgtype=0&src=http%3A%2F%2Fimg005.hc360.cn%2Fk1%2FM09%2F5A%2FCD%2FwKhQwFe-XdKETrD7AAAAAMlpCMI236.jpg',
-        summary: '不知道的以为他已经去世了'
-    },
-        {
-        id: 123,
+        id: 22,
         title: 'teststete',
-        img_url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566305780140&di=90f07c2708786aed20c7b65ab2d849e1&imgtype=0&src=http%3A%2F%2Fimg005.hc360.cn%2Fk1%2FM09%2F5A%2FCD%2FwKhQwFe-XdKETrD7AAAAAMlpCMI236.jpg',
-        summary: '难能可贵的是他始终保留着这个一生的习惯'
+        img_url: pic2,
+        summary: '难能可贵的是他始终保留着这个一生的习惯难能可贵的是他始终保留着这个一生的习惯难能可贵的是他始终保留着这个一生的习惯难能可贵的是他始终保留着这个一生的习惯'
     },
     {
-        id: 2243,
-        title: 'TITLE',
-        img_url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566305780140&di=90f07c2708786aed20c7b65ab2d849e1&imgtype=0&src=http%3A%2F%2Fimg005.hc360.cn%2Fk1%2FM09%2F5A%2FCD%2FwKhQwFe-XdKETrD7AAAAAMlpCMI236.jpg',
-        summary: '不知道的以为他已经去世了'
-    },
-        {
-        id: 243,
+        id: 23,
         title: 'teststete',
-        img_url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566305780140&di=90f07c2708786aed20c7b65ab2d849e1&imgtype=0&src=http%3A%2F%2Fimg005.hc360.cn%2Fk1%2FM09%2F5A%2FCD%2FwKhQwFe-XdKETrD7AAAAAMlpCMI236.jpg',
-        summary: '难能可贵的是他始终保留着这个一生的习惯'
+        img_url: pic3,
+        summary: '难能可贵的是他始终保留着这个一生的习惯难能可贵的是他始终保留着这个一生的习惯难能可贵的是他始终保留着这个一生的习惯难能可贵的是他始终保留着这个一生的习惯'
     },
     {
-        id: 2423,
-        title: 'TITLE',
-        img_url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566305780140&di=90f07c2708786aed20c7b65ab2d849e1&imgtype=0&src=http%3A%2F%2Fimg005.hc360.cn%2Fk1%2FM09%2F5A%2FCD%2FwKhQwFe-XdKETrD7AAAAAMlpCMI236.jpg',
-        summary: '不知道的以为他已经去世了'
+        id: 24,
+        title: 'teststete',
+        img_url: pic4,
+        summary: '难能可贵的是他始终保留着这个一生的习惯难能可贵的是他始终保留着这个一生的习惯难能可贵的是他始终保留着这个一生的习惯难能可贵的是他始终保留着这个一生的习惯'
+    },
+        {
+        id: 25,
+        title: 'teststete',
+        img_url: pic5,
+        summary: '难能可贵的是他始终保留着这个一生的习惯难能可贵的是他始终保留着这个一生的习惯难能可贵的是他始终保留着这个一生的习惯难能可贵的是他始终保留着这个一生的习惯'
     }
+
 ];
 
 const categoryList = [

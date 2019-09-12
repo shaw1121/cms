@@ -34,7 +34,7 @@ export default {
         height: 40px;
         line-height: 40px;
         position: relative;
-        background-color: #FD8008;
+        background-color: #eaeaea;
     }
     
     h3 {

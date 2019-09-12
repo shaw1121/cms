@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <mt-header fixed title="资产管理系统">
+    <mt-header fixed title="Asset Management System">
       <router-link to="/" slot="left">
-        <mt-button icon="back">返回</mt-button>
+        <mt-button icon="back">Back</mt-button>
       </router-link>
       <mt-button icon="more" slot="right"></mt-button>
     </mt-header>
@@ -13,20 +13,19 @@
       <mt-tab-item id="home">
         <!-- <img slot="icon" src="../assets/100x100.png"> -->
         <i class="fa fa-tachometer" aria-hidden="true"></i>
-        首页
+        Index
       </mt-tab-item>
       <mt-tab-item id="vip">
         <!-- <img slot="icon" src="../assets/100x100.png"> -->
-
-        会员
+        Tenant
       </mt-tab-item>
-      <mt-tab-item id="shoppingcart">
-        <!-- <img slot="icon" src="../assets/100x100.png"> -->
-        购物车
-      </mt-tab-item>
+      <!-- <mt-tab-item id="shoppingcart">
+        <img slot="icon" src="../assets/100x100.png">
+        Assets
+      </mt-tab-item> -->
       <mt-tab-item id="search">
         <!-- <img slot="icon" src="../assets/100x100.png"> -->
-        查找
+        Search
       </mt-tab-item>
     </mt-tabbar>
   </div>

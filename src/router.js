@@ -23,6 +23,9 @@ const PhotoGallery = () => import('./components/Photo/PhotoGallery.vue')
 const PhotoDetail = () => import('./components/Photo/PhotoDetail.vue')
 const GoodsList = () => import('./components/Goods/GoodsList.vue')
 const ReportTable = () => import('./components/Report/ReportTable.vue')
+const HistoryData = () => import('./components/History/HistoryData.vue')
+const AssetsList = () => import('./components/Assets/AssetsList.vue')
+const IoTModelling = () => import('./components/Modeling/IotModeling.vue')
 
 Vue.use(Router);
 
@@ -88,6 +91,21 @@ export default new Router({
       name: 'reportTable',
       component: ReportTable
     },
+    {
+      path: '/history',
+      name: 'historyData',
+      component: HistoryData
+    },
+    {
+      path: '/assets',
+      name: 'assetsList',
+      component: AssetsList
+    },
+    {
+      path: '/modeling',
+      name: 'iotModeling',
+      component: IoTModelling
+    }
     // {
     //   path: '/about',
     //   name: 'about',
